@@ -21,23 +21,21 @@ Using **Python** for web scraping and data preprocessing and **Power BI** for vi
 > 💡 **To interact with the dashboard, download the `T20 Analytics Dashboard.pbix` file from this repository and open it in Microsoft Power BI Desktop.**
 
 ---
-
 # 📋 Table of Contents
 
-- 📌 Project Overview
-- ❓ Problem Statement
-- 📂 Dataset Information
-- 🔄 Project Workflow
-- 🌐 Data Collection
-- 🧹 Data Transformation
-- 🗃️ Data Modelling
-- ⚙️ DAX Measures
-- 🎯 Player Selection Criteria
-- 📊 Dashboard Screenshots
-- 🛠️ Tools & Technologies
-- 📎 References
-- 🙌 Acknowledgements
-
+- [📌 Project Overview](#-project-overview)
+- [❓ Problem Statement](#-problem-statement)
+- [📂 Dataset Information](#-dataset-information)
+- [🔄 Project Workflow](#-project-workflow)
+- [🌐 Data Collection](#-data-collection)
+- [🧹 Data Transformation](#-data-transformation)
+- [🗃️ Data Modelling](#️-data-modelling)
+- [⚙️ DAX Measures](#️-dax-measures)
+- [🎯 Player Selection Criteria](#-player-selection-criteria)
+- [📊 Dashboard Screenshots](#-dashboard-screenshots)
+- [🛠️ Tools & Technologies](#️-tools--technologies)
+- [📎 References](#-references)
+- [🙌 Acknowledgements](#-acknowledgements)
 ---
 
 # ❓ Problem Statement
