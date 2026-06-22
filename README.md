@@ -208,28 +208,26 @@ t20_bowling_summary[fours] * 4 +
 t20_bowling_summary[sixes] * 6
 ```
 
+---
+
 ## 🧩 Dynamic Selection Measures
 
 ```DAX
 Player Selection =
-IF(
-ISFILTERED(t20_players_info[name]),
-"1",
-"0"
-)
+IF(ISFILTERED(t20_players_info[name]), "1", "0")
 
 Display Text =
 IF(
-[Player Selection] = "1",
-" ",
-"Select Player(s) by clicking the player's name to see their individual or combined strength"
+    [Player Selection] = "1",
+    " ",
+    "Select Player(s) by clicking the player's name to see their individual or combined strength"
 )
 
 Color Callout Value =
 IF(
-[Player Selection] = "0",
-"#E8D166",
-"#1D1D2E"
+    [Player Selection] = "0",
+    "#E8D166",
+    "#1D1D2E"
 )
 ```
 
@@ -237,7 +235,7 @@ IF(
 
 # 🎯 Player Selection Criteria
 
-One of the most powerful features of this dashboard is the ability to build your own **Final Playing 11** using data-driven selection criteria.
+One of the most powerful features of this dashboard is the ability to build your own **Final Playing 11** using data-driven criteria.
 
 Each player role has a clearly defined set of parameters and minimum thresholds that a player must meet to be considered for that position.
 
@@ -250,16 +248,41 @@ The criteria were defined as part of the problem statement and are used to filte
 Openers need to score quickly right from ball one — they're evaluated on high strike rate, good average, and boundary dominance.
 
 <p align="center">
-  <img src="openers_criteria.png" width="85%">
+  <img src="openers_criteria.png" alt="Openers Criteria" width="75%">
 </p>
 
-| Parameter | Description | Criteria |
-|-----------|-------------|----------|
-| Batting Average | Average runs scored in an innings | > 30 |
-| Strike Rate | No. of runs scored per 100 balls | > 140 |
-| Innings Batted | Total innings batted | > 3 |
-| Boundary % | % of runs scored in boundaries | > 50 |
-| Batting Position | Order in which the batter played | < 4 |
+<table align="center" width="75%">
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Criteria</th>
+  </tr>
+  <tr>
+    <td>Batting Average</td>
+    <td>Average runs scored in an innings</td>
+    <td>&gt; 30</td>
+  </tr>
+  <tr>
+    <td>Strike Rate</td>
+    <td>No. of runs scored per 100 balls</td>
+    <td>&gt; 140</td>
+  </tr>
+  <tr>
+    <td>Innings Batted</td>
+    <td>Total innings batted</td>
+    <td>&gt; 3</td>
+  </tr>
+  <tr>
+    <td>Boundary %</td>
+    <td>% of runs scored in boundaries</td>
+    <td>&gt; 50</td>
+  </tr>
+  <tr>
+    <td>Batting Position</td>
+    <td>Order in which the batter played</td>
+    <td>&lt; 4</td>
+  </tr>
+</table>
 
 ---
 
@@ -268,16 +291,41 @@ Openers need to score quickly right from ball one — they're evaluated on high 
 Anchors are the backbone of the batting lineup — they need consistency and the ability to stay at the crease while building partnerships.
 
 <p align="center">
-  <img src="anchors_criteria.png" width="85%">
+  <img src="anchors_criteria.png" alt="Anchors Criteria" width="75%">
 </p>
 
-| Parameter | Description | Criteria |
-|-----------|-------------|----------|
-| Batting Average | Average runs scored in an innings | > 40 |
-| Strike Rate | No. of runs scored per 100 balls | > 125 |
-| Innings Batted | Total innings batted | > 3 |
-| Avg. Balls Faced | Average balls faced by the batter in an innings | > 20 |
-| Batting Position | Order in which the batter played | > 2 |
+<table align="center" width="75%">
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Criteria</th>
+  </tr>
+  <tr>
+    <td>Batting Average</td>
+    <td>Average runs scored in an innings</td>
+    <td>&gt; 40</td>
+  </tr>
+  <tr>
+    <td>Strike Rate</td>
+    <td>No. of runs scored per 100 balls</td>
+    <td>&gt; 125</td>
+  </tr>
+  <tr>
+    <td>Innings Batted</td>
+    <td>Total innings batted</td>
+    <td>&gt; 3</td>
+  </tr>
+  <tr>
+    <td>Avg. Balls Faced</td>
+    <td>Average balls faced by the batter in an innings</td>
+    <td>&gt; 20</td>
+  </tr>
+  <tr>
+    <td>Batting Position</td>
+    <td>Order in which the batter played</td>
+    <td>&gt; 2</td>
+  </tr>
+</table>
 
 ---
 
@@ -286,17 +334,46 @@ Anchors are the backbone of the batting lineup — they need consistency and the
 Finishers must be able to accelerate at the death and have the ability to contribute with the ball too.
 
 <p align="center">
-  <img src="finishers_criteria.png" width="85%">
+  <img src="finishers_criteria.png" alt="Finishers Criteria" width="75%">
 </p>
 
-| Parameter | Description | Criteria |
-|-----------|-------------|----------|
-| Batting Average | Average runs scored in an innings | > 25 |
-| Strike Rate | No. of runs scored per 100 balls | > 130 |
-| Innings Batted | Total innings batted | > 3 |
-| Avg. Balls Faced | Average balls faced by the batter in an innings | > 12 |
-| Batting Position | Order in which the batter played | > 4 |
-| Innings Bowled | Total innings bowled by the bowler | > 1 |
+<table align="center" width="75%">
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Criteria</th>
+  </tr>
+  <tr>
+    <td>Batting Average</td>
+    <td>Average runs scored in an innings</td>
+    <td>&gt; 25</td>
+  </tr>
+  <tr>
+    <td>Strike Rate</td>
+    <td>No. of runs scored per 100 balls</td>
+    <td>&gt; 130</td>
+  </tr>
+  <tr>
+    <td>Innings Batted</td>
+    <td>Total innings batted</td>
+    <td>&gt; 3</td>
+  </tr>
+  <tr>
+    <td>Avg. Balls Faced</td>
+    <td>Average balls faced by the batter in an innings</td>
+    <td>&gt; 12</td>
+  </tr>
+  <tr>
+    <td>Batting Position</td>
+    <td>Order in which the batter played</td>
+    <td>&gt; 4</td>
+  </tr>
+  <tr>
+    <td>Innings Bowled</td>
+    <td>Total innings bowled by the bowler</td>
+    <td>&gt; 1</td>
+  </tr>
+</table>
 
 ---
 
@@ -305,18 +382,51 @@ Finishers must be able to accelerate at the death and have the ability to contri
 All-Rounders must contribute both with bat and ball — they're evaluated on a combined batting and bowling threshold.
 
 <p align="center">
-  <img src="all-rounders_criteria.png" width="85%">
+  <img src="all-rounders_criteria.png" alt="All Rounders Criteria" width="75%">
 </p>
 
-| Parameter | Description | Criteria |
-|-----------|-------------|----------|
-| Batting Average | Average runs scored in an innings | > 15 |
-| Strike Rate | No. of runs scored per 100 balls | > 140 |
-| Innings Batted | Total innings batted | > 2 |
-| Batting Position | Order in which the batter played | > 4 |
-| Innings Bowled | Total innings bowled | > 2 |
-| Bowling Economy | Average runs allowed per over | < 7 |
-| Bowling Strike Rate | Average no. of balls required to take a wicket | < 20 |
+<table align="center" width="75%">
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Criteria</th>
+  </tr>
+  <tr>
+    <td>Batting Average</td>
+    <td>Average runs scored in an innings</td>
+    <td>&gt; 15</td>
+  </tr>
+  <tr>
+    <td>Strike Rate</td>
+    <td>No. of runs scored per 100 balls</td>
+    <td>&gt; 140</td>
+  </tr>
+  <tr>
+    <td>Innings Batted</td>
+    <td>Total innings batted</td>
+    <td>&gt; 2</td>
+  </tr>
+  <tr>
+    <td>Batting Position</td>
+    <td>Order in which the batter played</td>
+    <td>&gt; 4</td>
+  </tr>
+  <tr>
+    <td>Innings Bowled</td>
+    <td>Total innings bowled</td>
+    <td>&gt; 2</td>
+  </tr>
+  <tr>
+    <td>Bowling Economy</td>
+    <td>Average runs allowed per over</td>
+    <td>&lt; 7</td>
+  </tr>
+  <tr>
+    <td>Bowling Strike Rate</td>
+    <td>Average no. of balls required to take a wicket</td>
+    <td>&lt; 20</td>
+  </tr>
+</table>
 
 ---
 
@@ -325,16 +435,45 @@ All-Rounders must contribute both with bat and ball — they're evaluated on a c
 Specialist fast bowlers are selected purely on bowling performance — economy, wicket-taking ability, and dot ball pressure are the key metrics.
 
 <p align="center">
-  <img src="specialist-fast-bowlers_criteria.png" width="85%">
+  <img src="specialist-fast-bowlers_criteria.png" alt="Specialist Fast Bowlers Criteria" width="75%">
 </p>
 
-| Parameter | Description | Criteria |
-|-----------|-------------|----------|
-| Innings Bowled | Total innings bowled | > 4 |
-| Bowling Economy | Average runs allowed per over | < 7 |
-| Bowling Strike Rate | Average no. of balls required to take a wicket | < 16 |
-| Bowling Style | Bowling style of the player | = "%Fast%" |
-| Bowling Average | No. of runs allowed per wicket | < 20 |
-| Dot Ball % | % of dot balls bowled | > 40 |
+<table align="center" width="75%">
+  <tr>
+    <th>Parameter</th>
+    <th>Description</th>
+    <th>Criteria</th>
+  </tr>
+  <tr>
+    <td>Innings Bowled</td>
+    <td>Total innings bowled</td>
+    <td>&gt; 4</td>
+  </tr>
+  <tr>
+    <td>Bowling Economy</td>
+    <td>Average runs allowed per over</td>
+    <td>&lt; 7</td>
+  </tr>
+  <tr>
+    <td>Bowling Strike Rate</td>
+    <td>Average no. of balls required to take a wicket</td>
+    <td>&lt; 16</td>
+  </tr>
+  <tr>
+    <td>Bowling Style</td>
+    <td>Bowling style of the player</td>
+    <td>= "%Fast%"</td>
+  </tr>
+  <tr>
+    <td>Bowling Average</td>
+    <td>No. of runs allowed per wicket</td>
+    <td>&lt; 20</td>
+  </tr>
+  <tr>
+    <td>Dot Ball %</td>
+    <td>% of dot balls bowled</td>
+    <td>&gt; 40</td>
+  </tr>
+</table>
 
 ---
