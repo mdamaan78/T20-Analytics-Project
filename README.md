@@ -136,42 +136,47 @@ Additional calculated columns and DAX measures enable dynamic player selection a
 ## 🏏 Batting
 
 ```DAX
-Total Runs =
-SUM(t20_batting_summary[runs])
+Total Runs = SUM(t20_batting_summary[runs])
 
-Batting Avg =
-DIVIDE([Total Runs],[Total Innings Dismissed],0)
+Total Innings Batted = COUNT(t20_batting_summary[matchID])
 
-Strike Rate =
-DIVIDE([Total Runs],[Total Balls Faced],0)*100
+Total Innings Dismissed = SUM(t20_batting_summary[Out])
 
-Boundary % =
-DIVIDE(
-SUM(t20_batting_summary[Boundary runs]),
-[Total Runs],0
-)*100
+Batting Avg = DIVIDE([Total Runs], [Total Innings Dismissed], 0)
+
+Total Balls Faced = SUM(t20_batting_summary[balls])
+
+Strike Rate = DIVIDE([Total Runs], [Total Balls Faced], 0) * 100
+
+Batting Position = ROUNDUP(AVERAGE(t20_batting_summary[battingPos]), 0)
+
+Boundary % = DIVIDE(SUM(t20_batting_summary[Boundary runs]), [Total Runs], 0) * 100
+
+Avg. Balls Faced = AVERAGE(t20_batting_summary[balls])
+
+Boundary Runs Batting = t20_batting_summary[fours] * 4 + t20_batting_summary[sixes] * 6
 ```
 
 ## 🎯 Bowling
 
 ```DAX
-Wickets =
-SUM(t20_bowling_summary[wickets])
+Wickets = SUM(t20_bowling_summary[wickets])
 
-Economy =
-DIVIDE([Runs Conceded],([Balls Bowled]/6),0)
+Balls Bowled = SUM(t20_bowling_summary[balls])
 
-Bowling Strike Rate =
-DIVIDE([Balls Bowled],[Wickets],0)
+Runs Conceded = SUM(t20_bowling_summary[runs])
 
-Bowling Average =
-DIVIDE([Runs Conceded],[Wickets],0)
+Economy = DIVIDE([Runs Conceded], ([Balls Bowled] / 6), 0)
 
-Dot Ball % =
-DIVIDE(
-SUM(t20_bowling_summary[zeros]),
-SUM(t20_bowling_summary[balls]),0
-)
+Bowling Strike Rate = DIVIDE([Balls Bowled], [Wickets], 0)
+
+Bowling Average = DIVIDE([Runs Conceded], [Wickets], 0)
+
+Total Innings Bowled = DISTINCTCOUNT(t20_bowling_summary[matchID])
+
+Dot Ball % = DIVIDE(SUM(t20_bowling_summary[zeros]), SUM(t20_bowling_summary[balls]), 0)
+
+Boundary Runs Bowling = t20_bowling_summary[fours] * 4 + t20_bowling_summary[sixes] * 6
 ```
 
 ---
