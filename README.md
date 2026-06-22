@@ -581,18 +581,6 @@ It helps support the project and motivates me to create more Data Analytics and 
 
 ---
 
-## 👨‍💻 Author
-
-**Amaan Shaikh**
-
-- 💼 Aspiring Data Analyst
-- 📊 Power BI | Python | SQL | Excel | Pandas
-- 🚀 Passionate about transforming data into actionable insights
-
----
-
-<div align="center">
-
 ### ⭐ Thanks for visiting this repository! ⭐
 
 **Happy Analyzing! 🏏📊**
