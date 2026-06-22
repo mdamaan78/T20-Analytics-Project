@@ -477,3 +477,124 @@ Specialist fast bowlers are selected purely on bowling performance — economy, 
 </table>
 
 ---
+# 📊 Dashboard Screenshots
+
+## 🔢 Final Playing 11 — Player Selection View
+
+Select any players from the full tournament pool on the left panel. The dashboard dynamically displays the combined team performance metrics at the bottom.
+
+<p align="center">
+  <img src="final-11.jpg" alt="Final Playing 11 Dashboard" width="90%">
+</p>
+
+---
+
+## 💥 Power Hitters / Openers
+
+Analysis of top-order batters evaluated on Runs, Strike Rate, Batting Average, Balls Faced, and Boundary Percentage.
+
+<p align="center">
+  <img src="power-hitters.jpg" alt="Power Hitters Dashboard" width="90%">
+</p>
+
+---
+
+## ⚓ Anchors / Middle Order
+
+Middle-order batters assessed on consistency using Batting Average, Balls Faced, Strike Rate, and Boundary Contribution.
+
+<p align="center">
+  <img src="anchors.jpg" alt="Anchors Dashboard" width="90%">
+</p>
+
+---
+
+## 🏁 Finishers / Lower Order Anchors
+
+Players capable of finishing games evaluated on Strike Rate under pressure, Average Balls Faced, and Bowling Contribution.
+
+<p align="center">
+  <img src="finishers.jpg" alt="Finishers Dashboard" width="90%">
+</p>
+
+---
+
+## 🔄 All-Rounders / Lower Middle Order
+
+Dual-threat players ranked by a combination of batting performance and bowling effectiveness.
+
+<p align="center">
+  <img src="all-rounders.jpg" alt="All Rounders Dashboard" width="90%">
+</p>
+
+---
+
+## 🎳 Specialist Fast Bowlers / Tail End
+
+Pure bowlers evaluated using Wickets, Bowling Economy, Bowling Strike Rate, Bowling Average, and Dot Ball Percentage.
+
+<p align="center">
+  <img src="specialist-fast-bowlers.jpg" alt="Specialist Fast Bowlers Dashboard" width="90%">
+</p>
+
+---
+
+# 🛠️ Tools & Technologies
+
+| Tool / Library | Purpose |
+|---------------------------|--------------------------------------------|
+| **Python** | Core scripting language |
+| **BeautifulSoup** | HTML parsing and web scraping |
+| **Bright Data** | Web scraping infrastructure |
+| **Pandas** | Data cleaning and preprocessing |
+| **Jupyter Notebook** | JSON to DataFrame conversion & EDA |
+| **Microsoft Power BI Desktop** | Data modelling & dashboard development |
+| **Power Query** | Data transformation |
+| **DAX** | Measures and calculated columns |
+| **ESPN Cricinfo** | Primary data source |
+
+---
+
+# 📎 References
+
+- 📌 ESPN Cricinfo — ICC Men's T20 Cricket World Cup 2022
+- 📌 Bright Data — Web Scraping Platform
+- 📌 Microsoft Power BI Documentation
+
+---
+
+# 🙌 Acknowledgements
+
+Special thanks to the open cricket data community and **ESPN Cricinfo** for making match and player data accessible for analytical projects.
+
+This project demonstrates how **Python, Web Scraping, Data Transformation, DAX, and Power BI** can be combined to build an interactive sports analytics solution for data-driven player selection.
+
+---
+
+# ⭐ Support
+
+If you found this project useful or learned something from it,
+
+### ⭐ Please consider giving this repository a Star!
+
+It helps support the project and motivates me to create more Data Analytics and Power BI projects.
+
+---
+
+## 👨‍💻 Author
+
+**Amaan Shaikh**
+
+- 💼 Aspiring Data Analyst
+- 📊 Power BI | Python | SQL | Excel | Pandas
+- 🚀 Passionate about transforming data into actionable insights
+
+---
+
+<div align="center">
+
+### ⭐ Thanks for visiting this repository! ⭐
+
+**Happy Analyzing! 🏏📊**
+
+</div>
